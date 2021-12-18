@@ -1,11 +1,22 @@
+body {
+  font-family: "Manrope", sans-serif;
+}
 h1 {
-  color: red;
+  color: #efcc30;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 28px;
 }
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: 15px;
 }
 .weather-app-wrapper {
   max-width: 600px;
+  margin: 30px 0 auto;
+  padding: 10px;
+  border: 1px solid #efcc30;
+  border-radius: 5px;
 }
