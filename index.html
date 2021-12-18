@@ -22,32 +22,41 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <h1>New York</h1>
-        <ul>
-          <li>Saturday, 12:02</li>
-          <li>Cloudy</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img src="images/cloud.png" width="80" alt="cloudy" />
-            12 °C | °F
-          </div>
-          <div class="col-6">
+        <div class="weather-app">
+          <div class="overview">
+            <h1>New York</h1>
             <ul>
-              <li>Wind:</li>
-              <li>Humidity:</li>
+              <li>Saturday, 12:02</li>
+              <li>Cloudy</li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img src="images/cloud.png" alt="cloudy" class="float-left" />
+                <div class="float-left">
+                  <span class="temperature">12</span>
+                  <span class="units">°C | <a href="#">°F</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Wind: km/h</li>
+                <li>Humidity: %</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-      <small
-        ><a
-          href="https://github.com/aliciaelena/SheCodesPlus_Weather-Application"
-          target="_blank"
-          >Open-source code</a
+        <small
+          ><a
+            href="https://github.com/aliciaelena/SheCodesPlus_Weather-Application"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Alicia Nagele</small
         >
-        by Alicia Nagele</small
-      >
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>

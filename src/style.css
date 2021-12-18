@@ -11,12 +11,41 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
+}
+img {
+  width: 90px;
+  margin-right: 5px;
+  margin-top: -25px;
+}
+small {
+  font-size: 13px;
 }
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 30px 0 auto;
+  margin: 30px auto;
+}
+.weather-app {
   padding: 10px;
   border: 1px solid #efcc30;
   border-radius: 5px;
+}
+.overview {
+  margin-bottom: 20px;
+}
+
+.temperature {
+  font-size: 48px;
+  font-style: bolder;
+  font-weight: 500;
+  line-height: 1;
+}
+.units {
+  position: relative;
+  font-size: 15px;
+  top: -25px;
+}
+
+.float-left {
+  float: left;
 }
