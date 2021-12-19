@@ -13,7 +13,6 @@ ul {
   margin: 0;
   font-size: 16px;
 }
-
 img {
   width: 90px;
   margin-right: 5px;
@@ -21,6 +20,9 @@ img {
 }
 small {
   font-size: 13px;
+}
+a {
+  text-decoration: none;
 }
 .weather-app-wrapper {
   max-width: 600px;
@@ -34,7 +36,6 @@ small {
 .overview {
   margin-bottom: 20px;
 }
-
 .temperature {
   font-size: 48px;
   font-style: bolder;
@@ -46,11 +47,17 @@ small {
   font-size: 15px;
   top: -25px;
 }
-
 .float-left {
   float: left;
 }
-
 .description {
   text-transform: capitalize;
+}
+.active {
+  color: black;
+  text-decoration: none;
+}
+.active:hover {
+  cursor: default;
+  color: black;
 }
