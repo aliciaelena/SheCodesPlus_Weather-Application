@@ -18,6 +18,11 @@ img {
   margin-right: 5px;
   margin-top: -25px;
 }
+img.forecast {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+}
 small {
   font-size: 13px;
 }
@@ -60,4 +65,16 @@ a {
 .active:hover {
   cursor: default;
   color: black;
+}
+.weather-forecast {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: -20px;
+}
+.weather-forecast-day,
+.weather-forecast-temperature {
+  font-size: 14px;
+}
+.minimum-temp {
+  opacity: 0.6;
 }
