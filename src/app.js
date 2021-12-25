@@ -72,6 +72,30 @@ function showCelciusTemp(event) {
   fahrenheitLink.classList.remove("active");
 }
 
+function showForecast() {
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-3">
+    <div class="weather-forecast-day">${day}</div>
+    <img
+      src="http://openweathermap.org/img/wn/01n@2x.png"
+      alt=""
+      class="forecast"
+    />
+    <div class="weather-forecast-temperature">
+      <span class="minimum-temp">1°C</span> |
+      <span class="maximum-temp">5°C</span>
+    </div>
+  </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 let searchElement = document.querySelector("#search-form");
 searchElement.addEventListener("submit", handleSubmit);
 
@@ -83,3 +107,4 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 celciusLink.addEventListener("click", showCelciusTemp);
 
 search("Vienna");
+showForecast();
