@@ -41,6 +41,7 @@ function showTemperature(result) {
     `http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", result.data.weather[0].description);
+  getForecast(result.data.coord);
 }
 
 function search(input) {
@@ -72,26 +73,44 @@ function showCelciusTemp(event) {
   fahrenheitLink.classList.remove("active");
 }
 
-function showForecast() {
+function getForecast(coordinates) {
+  let apiKey = "6a119ce5ad60b9883a83a56308bcd89c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+function showForecast(response) {
   let forecast = document.querySelector("#forecast");
+  let forecastData = response.data.daily;
   let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wed"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-3">
-    <div class="weather-forecast-day">${day}</div>
+  forecastData.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
+    <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
     <img
-      src="http://openweathermap.org/img/wn/01n@2x.png"
+      src="http://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png"
       alt=""
       class="forecast"
     />
     <div class="weather-forecast-temperature">
-      <span class="minimum-temp">1°C</span> |
-      <span class="maximum-temp">5°C</span>
+      <span class="minimum-temp">${Math.round(forecastDay.temp.min)}°C</span> |
+      <span class="maximum-temp">${Math.round(forecastDay.temp.max)}°C</span>
     </div>
   </div>`;
+    }
   });
+
   forecastHTML = forecastHTML + `</div>`;
   forecast.innerHTML = forecastHTML;
 }
@@ -107,4 +126,3 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 celciusLink.addEventListener("click", showCelciusTemp);
 
 search("Vienna");
-showForecast();
