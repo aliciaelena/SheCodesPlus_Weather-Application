@@ -1,9 +1,10 @@
 body {
   font-family: "Manrope", sans-serif;
+  color: #48484a;
 }
 h1 {
-  color: #efcc30;
-  font-size: 32px;
+  color: #ec6e4c;
+  font-size: 35px;
   font-weight: 500;
   line-height: 28px;
 }
@@ -11,23 +12,34 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: -15px;
   font-size: 16px;
 }
 img {
-  width: 90px;
-  margin-right: 5px;
+  width: 100px;
+  margin-left: 5px;
   margin-top: -25px;
 }
 img.forecast {
-  width: 60px;
+  width: 70px;
   display: block;
   margin: 0 auto;
 }
 small {
-  font-size: 13px;
+  font-size: 12px;
+}
+hr {
+  border: 1px solid #f2f2f1;
+  margin: 0;
 }
 a {
   text-decoration: none;
+  color: #ec6e4c;
+}
+a:hover,
+.minimum-temp {
+  color: #813c29;
+  opacity: 0.7;
 }
 .weather-app-wrapper {
   max-width: 600px;
@@ -35,8 +47,14 @@ a {
 }
 .weather-app {
   padding: 10px;
-  border: 1px solid #efcc30;
+  border: 2px solid #f2f2f1;
   border-radius: 5px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 189, 189) 0%,
+    rgb(255, 216, 168) 62%,
+    rgb(255, 248, 168) 100.7%
+  );
 }
 .overview {
   margin-bottom: 20px;
@@ -49,14 +67,14 @@ a {
 }
 .units {
   position: relative;
-  font-size: 15px;
+  font-size: 14px;
   top: -25px;
 }
 .float-left {
   float: left;
 }
-.description {
-  text-transform: capitalize;
+.description:first-letter {
+  text-transform: uppercase;
 }
 .active {
   color: black;
@@ -69,12 +87,13 @@ a {
 .weather-forecast {
   text-align: center;
   margin-top: 20px;
-  margin-left: -10px;
+  margin-bottom: 5px;
 }
 .weather-forecast-day,
 .weather-forecast-temperature {
   font-size: 14px;
 }
-.minimum-temp {
-  opacity: 0.6;
+
+.form {
+  margin-top: 5px;
 }

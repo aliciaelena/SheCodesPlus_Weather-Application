@@ -24,7 +24,7 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <div class="row">
+          <div class="row form">
               <div class="col-9">
                 <form id="search-form" class="mb-3">
                 <input
@@ -42,28 +42,27 @@
           </div>
           <div class="overview">
             <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li class="description" id="description">Cloudy</li>
-            </ul>
+              <small>Last updated:</small> <div id="date"></div></li>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="clearfix">
-                <img src="" alt="" class="float-left" id="icon" />
                 <div class="float-left">
                   <span class="temperature" id="temperature"></span>
                   <span class="units"><a href="#" id="celcius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span>
                 </div>
+                <img src="" alt="" class="float-left" id="icon" />
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Wind: <span id="wind"></span> km/h</li>
+                <li class="description" id="description">Cloudy</li>
+                <li>Wind: <span id="wind"></span> m/s</li>
                 <li>Humidity: <span id="humidity"></span> %</li>
               </ul>
             </div>
           </div>
+          <hr/>
           <div class="weather-forecast" id="forecast">
           </div>
         </div>
@@ -73,7 +72,7 @@
             target="_blank"
             >Open-source code</a
           >
-          by Alicia Nagele</small
+          by <a href="https://www.linkedin.com/in/alicia-nagele-789b5561/" target="_blank">Alicia Nagele</a></small
         >
       </div>
     </div>
