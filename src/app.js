@@ -133,11 +133,33 @@ searchElement.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#currentLocationButton");
 currentLocationButton.addEventListener("click", getCurrentPosition);
 
+search("Vienna");
+
+function searchParis() {
+  search("Paris");
+}
+function searchNewYork() {
+  search("New York");
+}
+function searchTokyo() {
+  search("Tokyo");
+}
+function searchSydney() {
+  search("Sydney");
+}
+
+let parisButton = document.querySelector("#parisButton");
+parisButton.addEventListener("click", searchParis);
+let newYorkButton = document.querySelector("#newYorkButton");
+newYorkButton.addEventListener("click", searchNewYork);
+let tokyoButton = document.querySelector("#tokyoButton");
+tokyoButton.addEventListener("click", searchTokyo);
+let sydneyButton = document.querySelector("#sydneyButton");
+sydneyButton.addEventListener("click", searchSydney);
+
 let celciusDegrees = null;
 
 let celciusLink = document.querySelector("#celcius-link");
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 celciusLink.addEventListener("click", showCelciusTemp);
-
-search("Vienna");
