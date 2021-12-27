@@ -96,16 +96,15 @@ function showForecast(response) {
         forecastHTML +
         `<div class="col-2">
     <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
-    <img
-      src="http://openweathermap.org/img/wn/${
-        forecastDay.weather[0].icon
-      }@2x.png"
+    <img src="http://openweathermap.org/img/wn/${
+      forecastDay.weather[0].icon
+    }@2x.png"
       alt=""
       class="forecast"
     />
     <div class="weather-forecast-temperature">
-      <span class="minimum-temp">${Math.round(forecastDay.temp.min)}°</span> |
-      <span class="maximum-temp">${Math.round(forecastDay.temp.max)}°</span>
+    <span class="minimum-temp">${Math.round(forecastDay.temp.min)}°</span> |
+    <span class="maximum-temp">${Math.round(forecastDay.temp.max)}°</span>
     </div>
   </div>`;
     }
@@ -132,8 +131,6 @@ searchElement.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#currentLocationButton");
 currentLocationButton.addEventListener("click", getCurrentPosition);
-
-search("Vienna");
 
 function searchParis() {
   search("Paris");
@@ -163,3 +160,5 @@ let celciusLink = document.querySelector("#celcius-link");
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 celciusLink.addEventListener("click", showCelciusTemp);
+
+search("Vienna");

@@ -90,12 +90,12 @@ a:hover,
   text-transform: uppercase;
 }
 .active {
-  color: black;
+  color: #48484a;
   text-decoration: none;
 }
 .active:hover {
   cursor: default;
-  color: black;
+  color: #48484a;
 }
 .weather-forecast {
   text-align: center;
