@@ -8,6 +8,14 @@ h1 {
   font-weight: 500;
   line-height: 28px;
 }
+h3 {
+  color: #ec6e4c;
+  line-height: 22px;
+  font-weight: 500;
+  font-size: 25px;
+  padding: 5px;
+  text-align: center;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -45,7 +53,12 @@ a:hover,
   max-width: 600px;
   margin: 30px auto;
 }
-.weather-app {
+.worldTemp-wrapper {
+  max-width: 600px;
+  margin: -20px auto;
+}
+.weather-app,
+.worldTemp-app {
   padding: 15px;
   border: 2px solid #f2f2f1;
   border-radius: 5px;

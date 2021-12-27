@@ -120,7 +120,6 @@ function handlePosition(location) {
   let lat = location.coords.latitude;
   let apiKey = "6a119ce5ad60b9883a83a56308bcd89c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(showTemperature);
 }
 
